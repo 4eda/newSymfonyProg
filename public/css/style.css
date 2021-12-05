@@ -1,0 +1,11 @@
+.post-right {
+    width: 12em;
+    max-width: 100%;
+    min-height: 2em;
+    margin-left: auto; /* то же, что margin-left: auto;  */
+    white-space: nowrap;
+}
+
+.diff-search{
+    display: none;
+}
