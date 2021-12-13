@@ -9,3 +9,17 @@
 .diff-search{
     display: none;
 }
+
+.window_main{
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top:5vh;
+    padding: 5vh; /* Поля вокруг изображения */
+    margin-bottom: 5vh; /* Отступ снизу */
+    outline: 1px solid #666; /* Параметры рамки */
+    background: #f0f0f0; /* Цвет фона */
+
+}
+.class_center_text {
+    text-align: center;
+}
