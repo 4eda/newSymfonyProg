@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initiall-scale=1 , shrink-to-fit=nio">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block javascripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"/>
+        {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+        <title>{% block title %}Главная{% endblock %}</title>
 
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
@@ -20,15 +25,11 @@
 
                         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                             <li><a href="{{ path('app_homepage') }}" class="nav-link px-2 text-white">Главная</a></li>
-                            <li><a href="{{ path('app_artical_show' , {slug: 'when-they-put-the-toilet-in-the-car'}) }}" class="nav-link px-2 text-white">Новости</a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">Полезная информация</a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">Контакты</a></li>
+                            <li><a href="{{ path('app_news') }}" class="nav-link px-2 text-white">Новости</a></li>
+                            <li><a href="{{ path('app_info') }}" class="nav-link px-2 text-white">Полезная информация</a></li>
+                            <li><a href="{{ path('app_about') }}" class="nav-link px-2 text-white">Контакты</a></li>
                             <li><a href="#" class="nav-link px-2 text-white">Для чего этот сайт?</a></li>
                         </ul>
-
-                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                            <input type="search" class="form-control form-control-dark" placeholder="Поиск..." aria-label="Поиск">
-                        </form>
 
                         <div class="text-end">
                             <button type="button" class="btn btn-outline-light me-2">Вход</button>
@@ -66,8 +67,5 @@
             </div>
         </div>
     </footer>
-{% block javascripts %}
-                <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
+
 </html>

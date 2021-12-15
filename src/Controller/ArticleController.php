@@ -18,6 +18,41 @@ class ArticleController extends AbstractController
     }
 
     /**
+     * @Route("/news" , name="app_news")
+     */
+    public function news()
+    {
+        return $this->render('articles/news.html.twig', [
+
+        ]);
+    }
+
+    /**
+     * @Route("/info" , name="app_info")
+     */
+    public function info()
+    {
+        return $this->render('articles/info.html.twig', [
+
+        ]);
+    }
+
+
+    /**
+     * @Route("/about" , name="app_about")
+     */
+    public function about()
+    {
+        return $this->render('articles/about.html.twig', [
+
+        ]);
+    }
+
+
+
+
+
+    /**
      * @Route("/articles/{slug}", name="app_artical_show")
      */
     public function show($slug)

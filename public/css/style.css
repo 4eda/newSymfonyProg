@@ -23,3 +23,17 @@
 .class_center_text {
     text-align: center;
 }
+
+.news{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.info {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.about_p {
+    font-size: 20px;
+}

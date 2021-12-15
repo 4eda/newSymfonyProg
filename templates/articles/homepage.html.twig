@@ -13,29 +13,30 @@
     <div class="container marketing mt-5">
         <!-- Three columns of text below the carousel -->
         <div class="row">
-            <div class="col-lg-8 ">
+            <div class="col-12 ">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
                      xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder:
                       140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <image x="0" y="0" width="275" height="95" xlink:href={{ asset('images/Edmund_Landau.jpg')}} />
-                    <rect width="100%" height="100%" fill="#777"></rect>
-                    <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    <rect width="100%" height="100%" fill="#777">
+                        <image x="0" y="0" width="275" height="95" xlink:href={{ asset('images/Edmund_Landau.jpg')}} />
+                    </rect>
                 </svg>
                 <h2>Золотарёв</h2>
                 <h3>Егор Иванович</h3>
                 <p>Наиболее известен как автор одного из самых простых доказательств закона взаимности, см. также Лемма Золотарёва</p>
                 <p><a class="btn btn-secondary" href="{{ path('app_artical_show' , {slug: 'landay-German'}) }}">Подробнее»</a></p>
             </div><!-- /.col-lg-4 -->
-            <div class="col-lg-8 ">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+            <div class="col-12">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
 
                 <h2>Чебышёв</h2>
                 <h3>Пафнутий Львович</h3>
                 <p>Русский математик и механик, основоположник петербургской математической школы, академик Петербургской академии наук (адъюнкт с 1853 года, экстраординарный академик с 1859 года)[3] и ещё 24 академий мира[4].</p>
                 <p><a class="btn btn-secondary" href="#">Подробнее »</a></p>
             </div><!-- /.col-lg-4 -->
-            <div class="col-lg-6">
+            <div class="col-12">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
                 <h2>Виноградов</h2>
@@ -66,11 +67,6 @@
         {% block javascripts %}
         {{ parent() }}
             <script>
-                    $('#id_btn_diff').click(function (){
-                            $('#id_diff_sear').removeClass('diff-search');
-                            $('#id_lite_sear').addClass('diff-search');
-                        }
-                    );
 
             </script>
 

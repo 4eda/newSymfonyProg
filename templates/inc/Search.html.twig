@@ -5,25 +5,16 @@
         </div>
                                 {# Простой поиск #}
             <div class="col-6" id="id_lite_sear">
-                <h1 class="mb-5">Заполните поля для поиска</h1>
+                <h1 class="mb-5">Быстрый поиск</h1>
                 <div class="row g-3">
-                    <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Имя" aria-label="Имя">
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Фамилия" aria-label="Фамилия">
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Отчество" aria-label="Отчество">
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Место работы" aria-label="Место работы">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Иванов Иван Ивановчи.." aria-label="Иванов Иван Ивановчи..">
                     </div>
                     <div class="col-6">
                         <button type="submit" class="btn btn-warning">Найти</button>
                     </div>
                     <div class="col-6 post-right">
-                        <button type="submit" class="btn btn-warning" id="id_btn_diff">Расширенный поиск</button>
+                        <button type="btn" class="btn btn-warning" id="id_btn_diff">Расширенный поиск</button>
                     </div>
                 </div>
             </div>
@@ -35,4 +26,12 @@
         </div>
     </div>
 </div>
+{% block javascripts %}
+    <script>
+        $("#id_btn_diff").on('click' , function (){
+          $("#id_diff_sear").removeClass('diff-search');
+          $('#id_lite_sear').addClass('diff-search');
+        });
 
+    </script>
+{%  endblock %}
